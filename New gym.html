@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max Fitness Gym</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1f1f1f;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #333;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      padding: 10px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: #555;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .hero {
+      background: url('https://marketplace.canva.com/EAFxdcos7WU/1/0/1600w/canva-dark-blue-and-brown-illustrative-fitness-gym-logo-oqe3ybeEcQQ.jpg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+      position: relative;
+    }
+
+    .hero h2 {
+  font-size: 3em;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* dark translucent overlay */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  animation: bounceIn 1.5s;
+  }
+
+
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      animation: slideUp 1s ease-out;
+    }
+
+    .section h3 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #1f1f1f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    .media {
+      margin-top: 40px;
+    }
+
+    .media img {
+      width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #1f1f1f;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Max Fitness</h1>
+  </header>
+
+  <nav>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#membership">Membership</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.youtube.com/@FitnessBlender" target="_blank">YouTube</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h2>Transform Your Body, Transform Your Life</h2>
+  </section>
+
+  <section class="section" id="about">
+    <h3>About Max</h3>
+    <p>Founded in 2017, Max Gym rapidly built a strong presence in the fitness industry and launched its franchise model in 2021. With around 15,000 active users and over 3.5 million social media followers, it has become one of Tamilnadu’s major fitness brands.</p>
+  </section>
+
+  <section class="section" id="programs">
+    <h3>Our Programs</h3>
+    <div class="cards">
+      <div class="card">
+        <img src="https://www.insidefitnessmag.com/cdn/shop/articles/strength-training-techniques-for-beginners-812748.jpg?v=1717177372"  alt="Strength">
+        <h4>Strength Training</h4>
+        <p>Build muscle and endurance with guided workouts and progressive overload techniques.</p>
+      </div>
+      <div class="card">
+        <img src="https://www.endomondo.com/wp-content/uploads/2024/02/best-cardio-for-weight-loss-img.jpg"   alt="Cardio">
+        <h4>Cardio</h4>
+        <p>Improve stamina and burn calories with our high-energy cardio classes.</p>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT70KJPiV6YA-_d1gZXwh3hN5NZE2zg40f7kg&s"  alt="Yoga">
+        <h4>Yoga & Flexibility</h4>
+        <p>Enhance physical and mental wellness through calming yoga sessions and stretching.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="membership">
+    <h3>Membership Form</h3>
+    <form action="membership-submitted.html" method="get">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="months">Subscription Duration (months)</label>
+      <select id="months" name="months" required>
+        <option value="1">1 Month</option>
+        <option value="3">3 Months</option>
+        <option value="6">6 Months</option>
+        <option value="12">12 Months</option>
+      </select>
+
+      <label for="goal">Fitness Goal</label>
+      <textarea id="goal" name="goal" rows="4" required></textarea>
+
+      <button type="submit">Join Now</button>
+    </form>
+  </section>
+
+  <section class="section" id="contact">
+  <h3>Contact Us</h3>
+  <p>Email: info@maxfitness.com</p>
+  <p>Phone: +91 7373040096</p>
+  <p>Location: <a href="https://maps.app.goo.gl/3rqVcB5jqMsKeeFw5" target="_blank">Aruppukottai, India (View on Map)</a></p>
+  </section>
+
+  
+
+  <footer>
+    <p>&copy; 2025 Max Fitness. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>
